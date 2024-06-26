@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "fdf011de-8add-426f-bb99-00af87c314f4",
+		"name": "Gym Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32946177"
+	},
+	"item": [
+		{
+			"name": "Members",
+			"item": [
+				{
+					"name": "Get All Members",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Members/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Members",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific Member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Members/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Members",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n      \"Id\": \"2\",\r\n      \"Name\": \"Jane Smith\",\r\n      \"NationalId\": \"0987654321\",\r\n      \"PhoneNumber\": \"9876543210\",\r\n      \"Membership\": {\r\n        \"from\": \"2024-03-01\",\r\n        \"to\": \"2024-08-31\",\r\n        \"cost\": 1800\r\n      },\r\n      \"Status\": \"freeze\",\r\n      \"TrainerId\": \"1\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/Members/addMember",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Members",
+								"addMember"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Member",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Members/deleteMember/2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Members",
+								"deleteMember",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Member",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"Id\":33,\r\n      \"Name\": \"Mahmoud Sayeyd\",\r\n      \"NationalId\": \"30212161700578\",\r\n      \"PhoneNumber\": \"01101804085\",\r\n      \"Membership\": {\r\n        \"from\": \"2024-03-01\",\r\n        \"to\": \"2024-08-31\",\r\n        \"cost\": 800\r\n      },\r\n      \"Status\": \"active\",\r\n      \"TrainerId\": \"1\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/Members/updateMember/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Members",
+								"updateMember",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trainers",
+			"item": [
+				{
+					"name": "Get All Trainers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Trainers/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Trainers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific Trainer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Trainers/2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Trainers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Trainer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"444\",\r\n    \"Name\": \"Amr\",\r\n    \"Duration\": {\r\n        \"from\": \"2023-01-01\",\r\n        \"to\": \"2023-12-31\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/Trainers/addTrainer",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Trainers",
+								"addTrainer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Trainer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/Trainers/deleteTrainer/2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Trainers",
+								"deleteTrainer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Trainer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Mahmoud\",\r\n    \"Duration\": {\r\n        \"from\": \"2024-06-25\",\r\n        \"to\": \"2025-06-25\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/Trainers/updateTrainer/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Trainers",
+								"updateTrainer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Revenues",
+			"item": [
+				{
+					"name": "Ge Revenue Of All Members",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Revenues/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Revenues",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Revenue Of Specific Trainer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Revenues/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Revenues",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "http://localhost:3000"
+		}
+	]
+}
