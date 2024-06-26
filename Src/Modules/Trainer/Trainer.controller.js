@@ -59,7 +59,8 @@ const updateTrainerer = (req, res) => {
       statuscode: 404,
     });
   } else {
-    Trainers[trainerIndex] = { Id: trainerID, ...req.body };
+    const {Id , ...updateData} = req.body;
+    Trainers[trainerIndex] = { Id: trainerID, ...updateData };
     fs.writeFileSync("Data/Trainers.json", JSON.stringify(Trainers));
     res.status(200).json(Trainers[trainerIndex]);
   }
