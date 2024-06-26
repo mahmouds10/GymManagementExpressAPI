@@ -1,28 +1,11 @@
 [
-    {
-      "Id": "1",
-      "Name": "John Doe",
-      "NationalId": "1234567890",
-      "PhoneNumber": "1234567890",
-      "Membership": {
-        "from": "2023-01-01",
-        "to": "2023-12-31",
-        "cost": 1000
-      },
-      "Status": "active",
-      "TrainerId": "1"
-    },
-    {
-      "Id": "2",
-      "Name": "Jane Smith",
-      "NationalId": "0987654321",
-      "PhoneNumber": "9876543210",
-      "Membership": {
-        "from": "2024-03-01",
-        "to": "2024-08-31",
-        "cost": 800
-      },
-      "Status": "freeze",
-      "TrainerId": "2"
-    }
-  ]
+  {
+    "Id": "1",
+    "Name": "Mahmoud Sayeyd",
+    "NationalId": "30212161700578",
+    "PhoneNumber": "01101804085",
+    "Membership": { "from": "2024-03-01", "to": "2024-08-31", "cost": 800 },
+    "Status": "active",
+    "TrainerId": "1"
+  }
+]
